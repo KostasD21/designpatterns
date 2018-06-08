@@ -5,11 +5,7 @@ class Singleton {
     /**
      * The instance that was initialized
      */
-    static Singleton INSTANCE;
-    /**
-     * The flag that helps to determine if an instance already initialized
-     */
-    private static boolean init = false;
+    private static Singleton INSTANCE;
 
     /**
      * Private constructor in order to override the default public constructor
@@ -21,10 +17,10 @@ class Singleton {
     /**
      * This method checks if an instance is already initialized
      */
-    static void initialize() {
-        if (!init) {
-            init = true;
+    static Singleton initialize() {
+        if (INSTANCE == null) {
             INSTANCE = new Singleton();
         }
+        return INSTANCE;
     }
 }
