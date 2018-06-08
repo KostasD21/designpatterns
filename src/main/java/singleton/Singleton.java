@@ -1,7 +1,9 @@
+package singleton;
+
 /**
  * This class represents a singleton, which means that only one instance of this class can live in JVM
  */
-class Singleton {
+public class Singleton {
     /**
      * The instance that was initialized
      */
@@ -17,7 +19,7 @@ class Singleton {
     /**
      * This method checks if an instance is already initialized
      */
-    static Singleton initialize() {
+    public static Singleton initialize() {
         if (INSTANCE == null) {
             INSTANCE = new Singleton();
         }
